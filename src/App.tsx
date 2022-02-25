@@ -15,7 +15,7 @@ function App(props: IProps) {
       <BrowserRouter>
       <Routes>
         <Route path='tenant/:id' element={<TenantDetails client={client} />} />
-        <Route path='tenant' element={<TenantListing client={client}/>} />
+        <Route path='/' element={<TenantListing client={client}/>} />
         </Routes>
       </BrowserRouter>
   );
