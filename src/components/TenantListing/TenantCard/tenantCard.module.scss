@@ -1,0 +1,47 @@
+.cardContainer{
+        
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    height: max-content;
+    &.activeCard{
+        background-color: lightgreen;
+    }
+    &.inActiveCard{
+        background-color: lightcoral;
+    }
+    .title{
+        padding: 0.25rem 0.5rem;
+        font-size: 1.25rem;
+    }
+    .description{
+        padding: 0.25rem 0.5rem;
+        display: -webkit-box;
+        font-size: 0.8rem;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .details{
+        
+        cursor: pointer;
+        width:-webkit-fill-available;
+        font-size: 1.125rem;
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        background-color: beige;
+        text-align: center;
+        height: 0;
+        color: #395159;
+        transition: all ease-in-out 0.3s;
+    }
+    &:hover{
+        .details{
+            padding: 0.25rem 0.5rem;
+            height: 1.8rem;
+        }
+    }
+}

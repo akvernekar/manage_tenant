@@ -1,18 +1,27 @@
-# Getting Started with Create React App
+# Running the site locally
+1. Install project dependencies
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    npm install
 
-## Available Scripts
+2. Run the app
+    
+    npm start
 
-In the project directory, you can run:
 
-### `npm start`
+The site should now be running at <http://localhost:3000>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# get tenants api
+
+get all tenants <https://hungry-skinny-cappelletti.glitch.me/tenants>
+
+
+# dependency
+
+sass - <https://www.npmjs.com/package/sass> to write a scss code in your aplication
+
+apollo-link-rest - <https://www.apollographql.com/docs/react/api/link/apollo-link-rest/> call REST api inside graphql queries
+
 
 ### `npm test`
 

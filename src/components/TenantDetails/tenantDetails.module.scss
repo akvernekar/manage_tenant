@@ -1,0 +1,49 @@
+.detailsMainContent{
+    padding: 0.5rem;
+    .heading{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .loadingContent{
+        display: flex;
+        justify-content: center;
+    }
+.detailsContent{
+    padding: 0.5rem 1rem;
+    max-width: 70rem;
+    margin: 0 auto;
+    max-height: max-content;
+    border: 1px dashed rgba(0,0,0,0.4);
+    border-radius: 10px;
+    .statusTypeCode{
+        display: flex;
+        flex-direction: column;
+        
+        @media screen and (min-width:450px) {
+            flex-direction: row;
+            align-items: center;
+        justify-content: space-between;
+        }
+    }
+    .value{
+        color: rgba(0,0,0,0.8);
+        font-size: 1rem;
+        margin-bottom: 0;
+        margin-top: 0.25rem;
+
+    }
+    .statusValue{
+        padding: 0.25rem 1rem;
+        border-radius: 5px;
+        width: max-content;
+        &.active{
+            background-color: lightgreen;
+        }
+        &.inActive{
+            background-color: lightcoral;
+        }
+    }
+}
+}
+
+

@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ApolloClient } from '@apollo/client';
+import {Route, Routes , BrowserRouter} from 'react-router-dom';
+import TenantListing from './components/TenantListing/TenantListing';
+import TenantDetails  from './components/TenantDetails/TenantDetails';
 
-function App() {
+interface IProps {
+  client:ApolloClient<any>
+}
+
+function App(props: IProps) {
+  const {client} = props;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+      <BrowserRouter>
+      <Routes>
+        <Route path='tenant/:id' element={<TenantDetails client={client} />} />
+        <Route path='tenant' element={<TenantListing client={client}/>} />
+        </Routes>
+      </BrowserRouter>
   );
 }
 
